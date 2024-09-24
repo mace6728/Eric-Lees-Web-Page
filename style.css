@@ -120,10 +120,12 @@ body {
   list-style-type: none;
   position: relative;
 }
+
 .nav a {
-  width: 120px;
+  width: 110px;
   display: flex;
-  justify-content: center; /* Center text horizontally */
+  justify-content: center;
+  text-align: center;
   align-items: center; /* Center text vertically */
   margin: 0;
   background: #333;
@@ -131,6 +133,23 @@ body {
   text-decoration: none;
   height: 70px;
 }
+/* For screens smaller than 600px (smartphones) */
+@media (max-width: 600px) {
+  .nav a {
+    font-size: 8px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center; /* Center text vertically */
+    margin: 0;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    height: 70px;
+  }
+}
+
 
 .nav a:hover {
   background: #757575;

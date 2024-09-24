@@ -105,6 +105,7 @@ body {
   background: #333;
   color: #fff;
   position: fixed; /* Fixes the nav at the top */
+  width: 100%; /* Makes the nav span the entire width */
   margin-top: -20px;
 }
 

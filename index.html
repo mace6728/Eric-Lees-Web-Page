@@ -1,3 +1,8 @@
+<!--
+112550043 李知恆 第三次作業 11/1
+112550043 Chih-Heng Lee The Third Homework 11/1
+-->
+
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -7,8 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="popup.css">
   <title>Eric Lee's Web Page</title>
-   
+
   <link rel="apple-touch-icon" sizes="180x180" href="favicon-folder/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-folder/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-folder/favicon-16x16.png">
@@ -38,11 +44,11 @@
       </ul>
     </div>
   </nav>
-  <header class="header">
+  <div class="container_content">
     <div class="container_content">
       <h1 id="About me" class="font-bold about-me">About me</h1>
       <section>
-        <div class="box">
+        <div class="box animate-on-scroll">
           <div class="flex">
             <img class="ph-LeeChihHeng" src="img/ph-LeeChihHeng.jpg" width="110px" alt="ph-LeeChihHeng">
             <div class="box-heading">
@@ -62,23 +68,171 @@
         </div>
       </section>
     </div>
-  </header>
-  <main>
-    <div class="container_content">
-      <img src="img/meme1.png">
-      <h1 class="portfolio">This is my portfolio</h1>
+    <!-- Popup structure -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h1>This is a popup!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aspernatur, eaque tenetur totam ratione
+          suscipit voluptates, voluptatum nisi similique dolorem vero, asperiores sit facere ex? Aliquam odio fugiat sit
+          incidunt.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi saepe natus voluptates, nostrum
+          possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga repudiandae impedit praesentium.
+        </p>
+      </div>
     </div>
+
+    <div class="circle" id="circle"></div>
+
+    <!-- Advertisement popup structure -->
+    <div id="adPopup" class="ad-popup">
+      <div class="ad-popup-content">
+        <span class="close-btn" onclick="closeAdPopup()">&times;</span>
+        <h1>This is an advertisement!</h1>
+      </div>
+    </div>
+
+    <div id="kidPopup" class="kid-popup">
+      <div class="kid-popup-content">
+        <p>我要Shampoo🗿🗿🗿🔥🔥🔥</p>
+      </div>
+    </div>
+
+    <main>
+      <div class="container_content btn-center animate-on-scroll">
+        <div class="memePic">
+          <img src="img/meme1.png">
+        </div>
+        <h1 class="portfolio animate-on-scroll bounce-button">This is my portfolio</h1>
+        <div>
+          <h1 id="enhancedTyping"></h1>
+        </div>
+        <button id="openPopupBtn" class="button">Open popup</button>
+        <button onclick="openNewTab()" class="button">Open new tab</button>
+        <button onclick="openNewWindow()" class="button">Open new window</button>
+        <p id="timeDisplay">0000.0s</p> <!-- Time display element -->
+        <div class="container-sigma">
+          <h1 id="typing"></h1>
+          <button onclick="sigmaRespect()" class="button-sigma">respect</button>
+          <div class="sigma"></div>
+        </div>
+        <button id="changeColor" class="button">Change background color</button>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+        <p class="animate-on-scroll">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque fugiat, modi
+          saepe
+          natus voluptates, nostrum possimus id, optio ad doloribus nam dolor ex distinctio cumque tenetur fuga
+          repudiandae impedit praesentium.</p>
+      </div>
+  </div>
   </main>
   <footer class="footer">
     <div class="container">
       <p class="footer-text">Designed by Chih-Heng</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
+<canvas></canvas>
 
 </html>
 
-<!--
-112550043 李知恆 第一次作業 9/24
-112550043 Chih-Heng Lee The First Homework 9/24 
--->

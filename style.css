@@ -1,9 +1,10 @@
-@charset "utf-8";
 /*
-=======================================
-  Reset CSS
-=======================================
+112550043 李知恆 第三次作業 11/1
+112550043 Chih-Heng Lee The Third Homework 11/1
 */
+
+@charset "utf-8";
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -66,10 +67,6 @@ a:hover img {
   opacity: 0.7;
 }
 
-/* -------------------------------- */
-
-/* body */
-
 body {
   margin: 0;
   padding: 0;
@@ -77,41 +74,36 @@ body {
   font-size: 16px;
 }
 
-/* container */
-.container {
+.container, .container_content {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.container {
   max-width: 1200px;
 }
 
 .container_content {
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
   max-width: 800px;
-  justify-content: center;
 }
 
-/* section */
 .section {
   margin: 40px 0;
 }
 
-
-
-/* g-nav */
 .nav {
   background: #333;
   color: #fff;
-  position: fixed; /* Fixes the nav at the top */
-  width: 100%; /* Makes the nav span the entire width */
+  position: fixed; 
+  width: 100%; 
   margin-top: -20px;
+  z-index: 1000;
 }
 
 .nav ul {
-  justify-content: center; /* Centers the items within the ul */
-  align-items: center; /* Vertically centers the text */
+  justify-content: center; 
+  align-items: center; 
   padding: 0;
   margin: 0;
 }
@@ -126,14 +118,14 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center; /* Center text vertically */
+  align-items: center; 
   margin: 0;
   background: #333;
   color: #fff;
   text-decoration: none;
   height: 70px;
 }
-/* For screens smaller than 600px (smartphones) */
+
 @media (max-width: 600px) {
   .nav a {
     font-size: 8px;
@@ -141,7 +133,7 @@ body {
     display: flex;
     justify-content: center;
     text-align: center;
-    align-items: center; /* Center text vertically */
+    align-items: center; 
     margin: 0;
     background: #333;
     color: #fff;
@@ -150,22 +142,20 @@ body {
   }
 }
 
-
 .nav a:hover {
   background: #757575;
+  cursor: pointer;
 }
 
 .hashtags {
   padding-top: 10px;
 }
 
-/* 語言切換器的樣式 */
 .language-switcher {
   margin-left: auto;
   position: relative;
   cursor: pointer;
 }
-
 
 .dropdown {
   display: none;
@@ -207,18 +197,15 @@ body {
   flex-wrap: row wrap;
 }
 
-/* flex */
 .flex {
   display: flex;
   list-style-type: none;
   flex-wrap: row wrap;
 }
 
-/* header */
 .about-me {
   margin: 20px 0;
 }
-
 
 .box {
   background-color: #fff;
@@ -236,7 +223,6 @@ body {
   margin: 2%;
 }
 
-/* experience */
 .list-style {
   list-style-type: disc;
 }
@@ -251,11 +237,10 @@ body {
   padding: 30px;
   color: rgb(252, 252, 252);
 }
-/* font */
+
 .font-bold {
   font-size: 200%;
 }
-
 
 .font-mid {
   font-size: 150%;
@@ -266,7 +251,6 @@ body {
   color: #2f302f;
 }
 
-/* photo */
 .ph-LeeChihHeng {
   border-radius: 50%;
   padding: 10px ;
@@ -278,16 +262,11 @@ body {
   align-items: center;
 }
 
-/* hyperlink */
-
 .link-text {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* icon-color */
-
-.youtube-color
-{
+.youtube-color {
   color: #e72525;
 }
 
@@ -315,7 +294,6 @@ body {
   padding: 0.3em;
 }
 
-/* all-list-formatter */
 .list-formatter {
   margin-left: 50px;
 }
@@ -323,5 +301,3 @@ body {
 .transition {
   transition: 0.5s;
 }
-
-

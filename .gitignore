@@ -1,0 +1,15 @@
+# Ignore a specific file
+HW3_112550043_李知恆.pdf
+
+# Ignore all .log files in any directory
+*.log
+
+# Ignore a specific directory and its contents
+node_modules/
+
+# Ignore all .env files
+*.env
+
+# Ignore a file in a specific path
+/private/data.txt
+

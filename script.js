@@ -257,5 +257,5 @@ type();
 const circle = document.getElementById('circle');
 
 document.addEventListener('mousemove', (e) => {
-  circle.style.transform = `translate(${e.clientX -147}px, ${e.clientY -468}px)`;
+  circle.style.transform = `translate(${e.clientX-7.5}px, ${e.clientY-7.5}px)`;
 });
